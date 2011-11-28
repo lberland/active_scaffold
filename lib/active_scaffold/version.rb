@@ -3,7 +3,7 @@ module ActiveScaffold
     MAJOR = 3
     MINOR = 0
     PATCH = 24
-    CLARITY = 1
+    CLARITY = 2
 
     STRING = [MAJOR, MINOR, PATCH, CLARITY].compact.join('.')
   end
