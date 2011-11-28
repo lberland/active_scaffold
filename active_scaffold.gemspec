@@ -3,7 +3,7 @@ $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
 require 'active_scaffold/version'
 
 Gem::Specification.new do |s|
-  s.name = %q{active_scaffold}
+  s.name = %q{lberland_active_scaffold}
   s.version = ActiveScaffold::Version::STRING
   s.platform = Gem::Platform::RUBY
   s.email = %q{activescaffold@googlegroups.com}
