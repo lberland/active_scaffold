@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lberland_active_scaffold (3.0.24.1)
+    active_scaffold_clarity (3.0.24.1)
       rails (~> 3.0.0)
       render_component_vho
       verification
@@ -90,7 +90,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_scaffold_clarity!
   bundler (~> 1.0.0)
-  lberland_active_scaffold!
   rcov
   shoulda
