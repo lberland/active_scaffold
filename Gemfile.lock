@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    active_scaffold_clarity (3.0.24.1)
+    active_scaffold_clarity (3.0.24.2)
       rails (~> 3.0.0)
       render_component_vho
       verification
