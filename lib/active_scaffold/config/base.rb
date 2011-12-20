@@ -1,4 +1,5 @@
 module ActiveScaffold::Config
+
   class Base
     include ActiveScaffold::Configurable
     extend ActiveScaffold::Configurable
@@ -7,7 +8,9 @@ module ActiveScaffold::Config
       class << subclass
         # the crud type of the action. possible values are :create, :read, :update, :delete, and nil.
         # this is not a setting for the developer. it's self-description for the actions.
-        def crud_type; @crud_type; end
+        def crud_type;
+          @crud_type;
+        end
 
         protected
 
@@ -19,7 +22,9 @@ module ActiveScaffold::Config
     end
 
     # delegate
-    def crud_type; self.class.crud_type end
+    def crud_type;
+      self.class.crud_type
+    end
 
     # the user property gets set to the instantiation of the local UserSettings class during the automatic instantiation of this class.
     attr_accessor :user
@@ -36,24 +41,24 @@ module ActiveScaffold::Config
         # the session hash relevant to this action
         @session = storage
         # all the request params
-        @params = params
+        @params  = params
         # the configuration object for this action
-        @conf = conf
+        @conf    = conf
       end
     end
-    
+
     def formats
       @formats ||= []
     end
-    
+
     def formats=(val)
       @formats=val
     end
-    
+
     private
-    
+
     def columns=(val)
-      @columns = ActiveScaffold::DataStructures::ActionColumns.new(*val)
+      @columns        = ActiveScaffold::DataStructures::ActionColumns.new(*val)
       @columns.action = self
       @columns.set_columns(@core.columns) if @columns.respond_to?(:set_columns)
       @columns
